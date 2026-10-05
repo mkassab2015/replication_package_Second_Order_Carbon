@@ -1,0 +1,7 @@
+{
+  "candidates_enriched": 2025,
+  "with_ci_workflow": 1244,
+  "with_source_ratio>=0.10": 1900,
+  "passed_software_filter (final frame)": 1173,
+  "dropped_doc_like": 72
+}

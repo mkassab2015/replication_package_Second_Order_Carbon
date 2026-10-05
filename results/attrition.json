@@ -1,0 +1,10 @@
+{
+  "full_frame": 1173,
+  "adopters": 340,
+  "non_adopters": 833,
+  "matched_activity_sample": 614,
+  "matched_ci_sample_naive": 481,
+  "adopters_with_usable_ci_history": 223,
+  "complete_pre_adoption_ci_coverage": 179,
+  "of_which_adopters": 91
+}

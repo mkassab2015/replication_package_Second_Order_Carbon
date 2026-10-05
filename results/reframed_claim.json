@@ -1,0 +1,24 @@
+{
+  "causal_claim": false,
+  "headline": "AI-tool adoption co-occurs with a pre-existing rise in CI compute; naive DiD (+135%) does not survive trend adjustment (level jump null; slope +48% p=0.074). No effect on commit/PR volume.",
+  "key_numbers": {
+    "naive_did_ci_minutes_pct": 134.9,
+    "trend_adj_level_jump_pct": 11.2,
+    "trend_adj_level_jump_p": 0.65,
+    "trend_adj_slope_pct": 47.7,
+    "trend_adj_slope_p": 0.074,
+    "placebo_slope_pct": -5.2,
+    "placebo_slope_p": 0.68,
+    "pre_trend_per_period_pct": 24.0,
+    "pre_trend_p": 0.011,
+    "pretrend_joint_F": 4.54,
+    "pretrend_joint_p": 0.012,
+    "commits_pct": 4.0,
+    "commits_p": 0.67,
+    "prs_pct": -6.5,
+    "prs_p": 0.43,
+    "prs_p_bh": 0.57,
+    "n_repos_trendadj": 179,
+    "n_treated_trendadj": 91
+  }
+}

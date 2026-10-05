@@ -1,0 +1,6 @@
+Metric,Value,95% CI
+Precision,1.00,"[0.975, 1.00]"
+Recall,1.00,"[0.975, 1.00]"
+F1,1.00,-
+Cohen's kappa,0.991,-
+Confusion (TP/FP/FN/TN),150/0/0/100,-

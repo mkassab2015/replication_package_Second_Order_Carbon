@@ -1,0 +1,70 @@
+================================================================================
+PRE-REGISTRATION
+The Second-Order Carbon Footprint of AI Coding Tools:
+A Difference-in-Differences Study in Open Source
+(Frozen before outcome data were examined. Anonymized for review.)
+================================================================================
+
+RESEARCH QUESTIONS
+  RQ1 (Activity): Does adopting AI coding tools change a project's commit
+    frequency and pull-request volume, relative to comparable non-adopters?
+  RQ2 (Compute): Does adoption change a project's CI compute (workflow runs,
+    CI-minutes)?
+  RQ3 (Carbon): What is the carbon footprint associated with the adopter
+    cohort's CI compute, and how does a naive attribution compare to a
+    trend-adjusted one?
+
+MEASUREMENT-VALIDITY GATE (precondition, not a research question)
+  Detection of AI-tool adoption from public signals is validated BEFORE any
+  outcome analysis. Gate criterion, fixed in advance: precision of the
+  high-confidence signals against a dual-coded gold set must have a lower
+  95% (Wilson) confidence bound >= 0.90.
+  Contingency if the gate fails: redirect the study to a detector error
+  analysis rather than estimate effects from an unvalidated signal.
+
+DIRECTIONAL HYPOTHESES (expectations to be tested, not confirmed)
+  H1: post-adoption CI runs / CI-minutes increase vs matched controls.
+  H2: post-adoption commit / PR volume increase vs matched controls.
+  Null results treated as substantive.
+
+DESIGN
+  Quasi-experimental difference-in-differences with matched controls and an
+  event-study test of parallel trends. Unit = repository-month. Primary CI
+  outcome: monthly CI-minutes (log1p). Secondary: commits, PRs, CI runs.
+  Two-way fixed effects (repository + calendar month); cluster-robust SE by
+  repository. Multiple-comparison correction: Benjamini-Hochberg.
+  Placebo: fictitious adoption dates on controls.
+
+SAMPLING FRAME
+  Active public GitHub repositories in {Python, JavaScript, TypeScript, Go,
+  Java}, >= 50 stars, >= a minimum commit history, CI configured, active in
+  2022-01-01..2025-12-31; stratified across popularity bands
+  high (>=1000) / mid (200-999) / low (50-199). Exclude forks, mirrors,
+  archived repos, and documentation/list/curriculum repositories that are
+  not software projects.
+
+CARBON ACCOUNTING
+  Operational-emissions model (SCI / ISO/IEC 21031:2024), implemented via
+  Green Algorithms / Cloud Carbon Footprint. Reported as a low/central/high
+  sensitivity band over per-vCPU power, PUE, and grid intensity. Never a
+  single point estimate.
+
+================================================================================
+DEVIATION LOG (append-only)
+================================================================================
+- Outcomes split by data source. Activity outcomes (commits, PRs) use the full
+  window; CI outcomes are bounded by GitHub Actions retention (~12-14 months,
+  confirmed by the feasibility probe) and analyzed only on repositories with a
+  genuine retrievable pre-adoption baseline. Truncated pre-baseline CI months
+  are treated as missing, not zero.
+- Software-project filter added after piloting showed curated-list/book/
+  tutorial repositories contaminated the frame and the adoption signal.
+- MAJOR REFRAME (causal -> association + caution): the CI-minutes
+  parallel-trends assumption was violated (event-study leads jointly non-zero,
+  F=4.54, p=0.012; pre-existing rise ~+24%/period, p=0.011). The naive +135%
+  CI-minutes effect does not survive trend adjustment (level jump +11.2%,
+  p=0.65; slope +47.7%, p=0.074, n.s.). No effect on commit/PR volume. The
+  contribution is reframed around the validated detector, the attribution
+  gap, and a bounded descriptive carbon footprint reported as association.
+- Code-churn outcome dropped: the GitHub stats/code_frequency endpoint returns
+  HTTP 202 (async) at collection scale and did not reliably return data.

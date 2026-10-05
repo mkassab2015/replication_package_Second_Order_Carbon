@@ -1,0 +1,20 @@
+{
+  "low": {
+    "vcpu_power_kW": 0.001,
+    "pue": 1.1,
+    "grid_gco2_kwh": 50,
+    "vcpus": 2
+  },
+  "central": {
+    "vcpu_power_kW": 0.00229,
+    "pue": 1.18,
+    "grid_gco2_kwh": 369,
+    "vcpus": 2
+  },
+  "high": {
+    "vcpu_power_kW": 0.0035,
+    "pue": 1.4,
+    "grid_gco2_kwh": 700,
+    "vcpus": 2
+  }
+}

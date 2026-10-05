@@ -1,0 +1,39 @@
+AI-TOOL ADOPTION GOLD-SET CODEBOOK
+(Both annotators apply this identically. Anonymized for review.)
+==================================================================
+
+CONSTRUCT
+  Did THIS repository's own developers use an AI coding assistant (e.g.,
+  GitHub Copilot, Cursor, aider, Claude Code) in producing the code in this
+  repository? Judge the project's OWN development, not what the project is about.
+
+LABELS
+  ADOPTED      - direct evidence the project's developers used an AI coding
+                 assistant: a genuine AI co-author commit trailer; a committed
+                 project-level AI-tool config (CLAUDE.md, .cursor/, .cursorrules,
+                 .github/copilot-instructions.md, .aider*); or an explicit
+                 maintainer statement of use on this codebase.
+  NOT_ADOPTED  - no such evidence, OR the only signal is misleading: the repo
+                 is ABOUT AI tools (an awesome-list, a tutorial); a dependency
+                 merely SUPPORTS AI; a config file is empty boilerplate.
+  UNSURE       - genuinely ambiguous after inspecting the repository; recorded
+                 with a one-line reason and resolved by adjudication.
+
+PROCEDURE
+  1. Calibration: both annotators independently label a shared batch, then
+     compare and refine understanding of edge cases.
+  2. Both annotators independently label the full gold set, working from the
+     repository's own evidence (commit history, file tree, documentation),
+     NOT from the detector's verdict.
+  3. Disagreements and UNSURE cases are adjudicated against this codebook to a
+     single ADOPTED / NOT_ADOPTED label per repository.
+
+EDGE CASES
+  - AI-supporting library (e.g., an SDK for an LLM API): NOT_ADOPTED unless the
+    project's own code shows tool use.
+  - Vendored/third-party config not governing this repo: NOT_ADOPTED.
+  - Documentation-only mention: NOT_ADOPTED.
+
+REPORTED RELIABILITY
+  Cohen's kappa = 0.991 over decided pairs; detector precision/recall = 1.00
+  against adjudicated labels (Wilson 95% lower bound 0.975).

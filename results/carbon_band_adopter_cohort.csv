@@ -1,0 +1,4 @@
+scenario,total_CI_minutes,energy_kWh,CO2e_kg_observed,CO2e_kg_annualized,CO2e_tonnes_annualized
+low,37151013.0,1362.2,68.1,102.8,0.103
+central,37151013.0,3346.3,1234.8,1863.7,1.864
+high,37151013.0,6068.0,4247.6,6410.9,6.411

@@ -1,0 +1,4 @@
+estimate,effect_pct,attributable_CI_min,attributable_tCO2e_low,attributable_tCO2e_central,attributable_tCO2e_high
+naive_causal_+135%,135.0,3088623.0,0.006,0.103,0.353
+"trend_adj_level_jump_null(+11%,p=.65)",11.2,541517.0,0.001,0.018,0.062
+"trend_adj_slope_suggestive(+48%,p=.07)",47.7,1736349.0,0.003,0.058,0.199

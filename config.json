@@ -1,0 +1,79 @@
+{
+  "languages": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Go",
+    "Java"
+  ],
+  "min_stars": 50,
+  "require_ci": true,
+  "study_window": [
+    "2022-01-01",
+    "2025-12-31"
+  ],
+  "pre_period_days": 180,
+  "post_period_days": 180,
+  "exclude_forks": true,
+  "exclude_archived": true,
+  "popularity_bands": {
+    "high": {
+      "stars_min": 1000,
+      "stars_max": null
+    },
+    "mid": {
+      "stars_min": 200,
+      "stars_max": 999
+    },
+    "low": {
+      "stars_min": 50,
+      "stars_max": 199
+    }
+  },
+  "random_seed": 42,
+  "gate_precision_wilson_lower_bound": 0.9,
+  "gold_set_size": 250,
+  "adoption_signals": {
+    "commit_trailers": [
+      "co-authored-by: copilot",
+      "aider",
+      "co-authored-by: cursor",
+      "generated with cursor"
+    ],
+    "config_artifacts": [
+      "CLAUDE.md",
+      ".cursor",
+      ".cursorrules",
+      ".github/copilot-instructions.md",
+      ".aider.conf.yml",
+      ".continue"
+    ],
+    "readme_phrases": [
+      "github copilot",
+      "cursor editor",
+      "ai-assisted",
+      "aider",
+      "claude code"
+    ]
+  },
+  "carbon_factors": {
+    "low": {
+      "vcpu_power_kW": 0.001,
+      "pue": 1.1,
+      "grid_gco2_kwh": 50,
+      "vcpus": 2
+    },
+    "central": {
+      "vcpu_power_kW": 0.00229,
+      "pue": 1.18,
+      "grid_gco2_kwh": 369,
+      "vcpus": 2
+    },
+    "high": {
+      "vcpu_power_kW": 0.0035,
+      "pue": 1.4,
+      "grid_gco2_kwh": 700,
+      "vcpus": 2
+    }
+  }
+}

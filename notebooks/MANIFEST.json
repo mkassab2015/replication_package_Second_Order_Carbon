@@ -1,0 +1,8 @@
+{
+  "01_setup_prereg_feasibility.ipynb": "Pre-registration, Drive-backed project setup, resilient rate-limited GitHub client with on-disk cache, and a feasibility probe testing adoption-signal detectability and CI-history depth before full collection.",
+  "02_frame_and_G1_validation.ipynb": "Stratified sampling-frame collection (3 popularity bands x 5 languages) with the software-project filter, plus the G1 adoption-detector validation gate: gold-set construction, dual-coding read-back, Cohen's kappa, and precision/recall with Wilson CIs against the gate criterion.",
+  "03A_adoption_dating_and_panels.ipynb": "Adoption dating (earliest datable high-confidence signal), control pseudo-dating from the treated distribution, and resumable construction of repository-month activity and CI panels, split by data source.",
+  "03B_matching_did_eventstudy.ipynb": "Propensity-score matching with SMD balance; two-way fixed-effects DiD on all outcomes (log1p) with repository-clustered SEs and Benjamini-Hochberg correction; event-study parallel-trends test; trend-adjusted reanalysis; placebo test; heterogeneity by band and language.",
+  "04_carbon_accounting.ipynb": "Converts CI-minutes to energy and CO2e under the SCI/Green-Algorithms/CCF model across low/central/high factor scenarios; computes the adopter-cohort carbon band and the naive-vs-trend-adjusted attribution gap. Reframed: reports association and the attribution gap, not a causal carbon effect.",
+  "05_assembly_robustness_artifact.ipynb": "Assembles all results into paper-ready tables and figures, runs the remaining robustness checks, and packages the replication artifact."
+}
